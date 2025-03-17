@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: MyDLL.h Source File</title>
+<title>Doubly Linked List (DLL): MyDLL.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Doubly Linked List (DLL)
    </div>
   </td>
  </tr>
@@ -77,7 +77,65 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">MyDLL.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"> </div><!-- fragment --></div><!-- contents -->
+<a href="MyDLL_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef MYDLL_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define MYDLL_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structNode.html">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structNode.html">Node</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structNode.html#a868764e64becfb820d70f261153984f5">   22</a></span>    uint16_t <a class="code hl_variable" href="structNode.html#a868764e64becfb820d70f261153984f5">key</a>;           </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structNode.html#a06edc07167ccb8e056a78eacba2f3e85">   23</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structNode.html#a06edc07167ccb8e056a78eacba2f3e85">data</a>;    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structNode.html#aea9fefc3628c3ce98b967e8addf06e88">   24</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structNode.html">Node</a> *<a class="code hl_variable" href="structNode.html#aea9fefc3628c3ce98b967e8addf06e88">prev</a>;      </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structNode.html#af67b110ca1a258b793bf69d306929b22">   25</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structNode.html">Node</a> *<a class="code hl_variable" href="structNode.html#af67b110ca1a258b793bf69d306929b22">next</a>;      </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="structNode.html">Node</a>;</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structDoublyLinkedList.html">   32</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structDoublyLinkedList.html#a5c24f6fecfa2ec64a7c7f5206ae05414">   33</a></span>    <a class="code hl_struct" href="structNode.html">Node</a> *<a class="code hl_variable" href="structDoublyLinkedList.html#a5c24f6fecfa2ec64a7c7f5206ae05414">head</a>;             </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structDoublyLinkedList.html#a5f1051f674a07110241df52a1e93dd79">   34</a></span>    <a class="code hl_struct" href="structNode.html">Node</a> *<a class="code hl_variable" href="structDoublyLinkedList.html#a5f1051f674a07110241df52a1e93dd79">tail</a>;             </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structDoublyLinkedList.html#abd5a70d56f81c42dfcdab0d5a2acddf6">   35</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structDoublyLinkedList.html#abd5a70d56f81c42dfcdab0d5a2acddf6">max_elements</a>;    </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structDoublyLinkedList.html#af36ab271bd3241f8136b4ea158ff3dc5">   36</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structDoublyLinkedList.html#af36ab271bd3241f8136b4ea158ff3dc5">element_size</a>;    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structDoublyLinkedList.html#a25005bccc380920454f91ac89ccc2a59">   37</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structDoublyLinkedList.html#a25005bccc380920454f91ac89ccc2a59">count</a>;           </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a>;</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="MyDLL_8h.html#a78718ee2f6bf67755c05117b986b52dc">MyDLLInit</a>(<a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a> *list, <span class="keywordtype">size_t</span> max_elements, <span class="keywordtype">size_t</span> element_size);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">int</span> <a class="code hl_function" href="MyDLL_8h.html#ae63859d8efb99dffab4c321f018d3d3d">MyDLLInsert</a>(<a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a> *list, uint16_t key, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *data);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">int</span> <a class="code hl_function" href="MyDLL_8h.html#ae4f7e4b17a445b0e95c4dcda93ead24e">MyDLLRemove</a>(<a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a> *list, uint16_t key);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyDLL_8h.html#a9e885bab8a0cb581f68ef9ff29697860">MyDLLFind</a>(<a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a> *list, uint16_t key);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyDLL_8h.html#a8ea6c1cef9b9fe9576f422489f49d09f">MyDLLFindNext</a>(<a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a> *list, uint16_t key);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="MyDLL_8h.html#ad63ae7016842037286a1b90a85f4c4e6">MyDLLFindPrevious</a>(<a class="code hl_struct" href="structDoublyLinkedList.html">DoublyLinkedList</a> *list, uint16_t key);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif </span><span class="comment">// MYDLL_H</span></div>
+<div class="ttc" id="aMyDLL_8h_html_a78718ee2f6bf67755c05117b986b52dc"><div class="ttname"><a href="MyDLL_8h.html#a78718ee2f6bf67755c05117b986b52dc">MyDLLInit</a></div><div class="ttdeci">void MyDLLInit(DoublyLinkedList *list, size_t max_elements, size_t element_size)</div><div class="ttdoc">Inicializa a lista duplamente ligada.</div><div class="ttdef"><b>Definition</b> MyDLL.c:16</div></div>
+<div class="ttc" id="aMyDLL_8h_html_a8ea6c1cef9b9fe9576f422489f49d09f"><div class="ttname"><a href="MyDLL_8h.html#a8ea6c1cef9b9fe9576f422489f49d09f">MyDLLFindNext</a></div><div class="ttdeci">unsigned char * MyDLLFindNext(DoublyLinkedList *list, uint16_t key)</div><div class="ttdoc">Retorna os dados do próximo elemento na lista.</div><div class="ttdef"><b>Definition</b> MyDLL.c:123</div></div>
+<div class="ttc" id="aMyDLL_8h_html_a9e885bab8a0cb581f68ef9ff29697860"><div class="ttname"><a href="MyDLL_8h.html#a9e885bab8a0cb581f68ef9ff29697860">MyDLLFind</a></div><div class="ttdeci">unsigned char * MyDLLFind(DoublyLinkedList *list, uint16_t key)</div><div class="ttdoc">Procura um elemento na lista utilizando a key.</div><div class="ttdef"><b>Definition</b> MyDLL.c:105</div></div>
+<div class="ttc" id="aMyDLL_8h_html_ad63ae7016842037286a1b90a85f4c4e6"><div class="ttname"><a href="MyDLL_8h.html#ad63ae7016842037286a1b90a85f4c4e6">MyDLLFindPrevious</a></div><div class="ttdeci">unsigned char * MyDLLFindPrevious(DoublyLinkedList *list, uint16_t key)</div><div class="ttdoc">Retorna os dados do elemento anterior na lista.</div><div class="ttdef"><b>Definition</b> MyDLL.c:141</div></div>
+<div class="ttc" id="aMyDLL_8h_html_ae4f7e4b17a445b0e95c4dcda93ead24e"><div class="ttname"><a href="MyDLL_8h.html#ae4f7e4b17a445b0e95c4dcda93ead24e">MyDLLRemove</a></div><div class="ttdeci">int MyDLLRemove(DoublyLinkedList *list, uint16_t key)</div><div class="ttdoc">Remove um elemento da lista pelo key.</div><div class="ttdef"><b>Definition</b> MyDLL.c:72</div></div>
+<div class="ttc" id="aMyDLL_8h_html_ae63859d8efb99dffab4c321f018d3d3d"><div class="ttname"><a href="MyDLL_8h.html#ae63859d8efb99dffab4c321f018d3d3d">MyDLLInsert</a></div><div class="ttdeci">int MyDLLInsert(DoublyLinkedList *list, uint16_t key, unsigned char *data)</div><div class="ttdoc">Insere um novo elemento na lista.</div><div class="ttdef"><b>Definition</b> MyDLL.c:32</div></div>
+<div class="ttc" id="astructDoublyLinkedList_html"><div class="ttname"><a href="structDoublyLinkedList.html">DoublyLinkedList</a></div><div class="ttdoc">Estrutura da lista duplamente ligada.</div><div class="ttdef"><b>Definition</b> MyDLL.h:32</div></div>
+<div class="ttc" id="astructDoublyLinkedList_html_a25005bccc380920454f91ac89ccc2a59"><div class="ttname"><a href="structDoublyLinkedList.html#a25005bccc380920454f91ac89ccc2a59">DoublyLinkedList::count</a></div><div class="ttdeci">size_t count</div><div class="ttdef"><b>Definition</b> MyDLL.h:37</div></div>
+<div class="ttc" id="astructDoublyLinkedList_html_a5c24f6fecfa2ec64a7c7f5206ae05414"><div class="ttname"><a href="structDoublyLinkedList.html#a5c24f6fecfa2ec64a7c7f5206ae05414">DoublyLinkedList::head</a></div><div class="ttdeci">Node * head</div><div class="ttdef"><b>Definition</b> MyDLL.h:33</div></div>
+<div class="ttc" id="astructDoublyLinkedList_html_a5f1051f674a07110241df52a1e93dd79"><div class="ttname"><a href="structDoublyLinkedList.html#a5f1051f674a07110241df52a1e93dd79">DoublyLinkedList::tail</a></div><div class="ttdeci">Node * tail</div><div class="ttdef"><b>Definition</b> MyDLL.h:34</div></div>
+<div class="ttc" id="astructDoublyLinkedList_html_abd5a70d56f81c42dfcdab0d5a2acddf6"><div class="ttname"><a href="structDoublyLinkedList.html#abd5a70d56f81c42dfcdab0d5a2acddf6">DoublyLinkedList::max_elements</a></div><div class="ttdeci">size_t max_elements</div><div class="ttdef"><b>Definition</b> MyDLL.h:35</div></div>
+<div class="ttc" id="astructDoublyLinkedList_html_af36ab271bd3241f8136b4ea158ff3dc5"><div class="ttname"><a href="structDoublyLinkedList.html#af36ab271bd3241f8136b4ea158ff3dc5">DoublyLinkedList::element_size</a></div><div class="ttdeci">size_t element_size</div><div class="ttdef"><b>Definition</b> MyDLL.h:36</div></div>
+<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdoc">Estrutura de um nó da lista duplamente ligada.</div><div class="ttdef"><b>Definition</b> MyDLL.h:21</div></div>
+<div class="ttc" id="astructNode_html_a06edc07167ccb8e056a78eacba2f3e85"><div class="ttname"><a href="structNode.html#a06edc07167ccb8e056a78eacba2f3e85">Node::data</a></div><div class="ttdeci">unsigned char * data</div><div class="ttdef"><b>Definition</b> MyDLL.h:23</div></div>
+<div class="ttc" id="astructNode_html_a868764e64becfb820d70f261153984f5"><div class="ttname"><a href="structNode.html#a868764e64becfb820d70f261153984f5">Node::key</a></div><div class="ttdeci">uint16_t key</div><div class="ttdef"><b>Definition</b> MyDLL.h:22</div></div>
+<div class="ttc" id="astructNode_html_aea9fefc3628c3ce98b967e8addf06e88"><div class="ttname"><a href="structNode.html#aea9fefc3628c3ce98b967e8addf06e88">Node::prev</a></div><div class="ttdeci">struct Node * prev</div><div class="ttdef"><b>Definition</b> MyDLL.h:24</div></div>
+<div class="ttc" id="astructNode_html_af67b110ca1a258b793bf69d306929b22"><div class="ttname"><a href="structNode.html#af67b110ca1a258b793bf69d306929b22">Node::next</a></div><div class="ttdeci">struct Node * next</div><div class="ttdef"><b>Definition</b> MyDLL.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

@@ -1,5 +1,42 @@
 \doxysection{My\+DLL.\+h}
-\hypertarget{MyDLL_8h_source}{}\label{MyDLL_8h_source}
+\hypertarget{MyDLL_8h_source}{}\label{MyDLL_8h_source}\mbox{\hyperlink{MyDLL_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ MYDLL\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MYDLL\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNode}{Node}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structNode_a868764e64becfb820d70f261153984f5}{key}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structNode_a06edc07167ccb8e056a78eacba2f3e85}{data}};\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{structNode_aea9fefc3628c3ce98b967e8addf06e88}{prev}};\ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{structNode_af67b110ca1a258b793bf69d306929b22}{next}};\ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{structNode}{Node}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{structDoublyLinkedList_a5c24f6fecfa2ec64a7c7f5206ae05414}{head}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{structDoublyLinkedList_a5f1051f674a07110241df52a1e93dd79}{tail}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structDoublyLinkedList_abd5a70d56f81c42dfcdab0d5a2acddf6}{max\_elements}};\ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structDoublyLinkedList_af36ab271bd3241f8136b4ea158ff3dc5}{element\_size}};\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structDoublyLinkedList_a25005bccc380920454f91ac89ccc2a59}{count}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{MyDLL_8h_a78718ee2f6bf67755c05117b986b52dc}{MyDLLInit}}(\mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}}\ *list,\ \textcolor{keywordtype}{size\_t}\ max\_elements,\ \textcolor{keywordtype}{size\_t}\ element\_size);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{MyDLL_8h_ae63859d8efb99dffab4c321f018d3d3d}{MyDLLInsert}}(\mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}}\ *list,\ uint16\_t\ key,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *data);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{MyDLL_8h_ae4f7e4b17a445b0e95c4dcda93ead24e}{MyDLLRemove}}(\mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}}\ *list,\ uint16\_t\ key);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{MyDLL_8h_a9e885bab8a0cb581f68ef9ff29697860}{MyDLLFind}}(\mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}}\ *list,\ uint16\_t\ key);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{MyDLL_8h_a8ea6c1cef9b9fe9576f422489f49d09f}{MyDLLFindNext}}(\mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}}\ *list,\ uint16\_t\ key);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{MyDLL_8h_ad63ae7016842037286a1b90a85f4c4e6}{MyDLLFindPrevious}}(\mbox{\hyperlink{structDoublyLinkedList}{DoublyLinkedList}}\ *list,\ uint16\_t\ key);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MYDLL\_H}}
 
 \end{DoxyCode}

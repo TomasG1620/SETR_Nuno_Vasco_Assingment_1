@@ -1,0 +1,154 @@
+\doxysection{My\+DLL.\+c File Reference}
+\hypertarget{MyDLL_8c}{}\label{MyDLL_8c}\index{MyDLL.c@{MyDLL.c}}
+
+
+Implementação de uma lista duplamente ligada (DLL).  
+
+
+{\ttfamily \#include "{}My\+DLL.\+h"{}}\newline
+Include dependency graph for My\+DLL.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{MyDLL_8c_a78718ee2f6bf67755c05117b986b52dc}{My\+DLLInit}} (\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}list, size\+\_\+t max\+\_\+elements, size\+\_\+t element\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Inicializa a lista duplamente ligada. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{MyDLL_8c_ae63859d8efb99dffab4c321f018d3d3d}{My\+DLLInsert}} (\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}list, uint16\+\_\+t key, unsigned char \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Insere um novo elemento na lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{MyDLL_8c_ae4f7e4b17a445b0e95c4dcda93ead24e}{My\+DLLRemove}} (\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}list, uint16\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Remove um elemento da lista pelo key. \end{DoxyCompactList}\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{MyDLL_8c_a9e885bab8a0cb581f68ef9ff29697860}{My\+DLLFind}} (\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}list, uint16\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Procura um elemento na lista utilizando a key. \end{DoxyCompactList}\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{MyDLL_8c_a8ea6c1cef9b9fe9576f422489f49d09f}{My\+DLLFind\+Next}} (\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}list, uint16\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Retorna os dados do próximo elemento na lista. \end{DoxyCompactList}\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{MyDLL_8c_ad63ae7016842037286a1b90a85f4c4e6}{My\+DLLFind\+Previous}} (\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}list, uint16\+\_\+t key)
+\begin{DoxyCompactList}\small\item\em Retorna os dados do elemento anterior na lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação de uma lista duplamente ligada (DLL). 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{MyDLL_8c_a9e885bab8a0cb581f68ef9ff29697860}\label{MyDLL_8c_a9e885bab8a0cb581f68ef9ff29697860} 
+\index{MyDLL.c@{MyDLL.c}!MyDLLFind@{MyDLLFind}}
+\index{MyDLLFind@{MyDLLFind}!MyDLL.c@{MyDLL.c}}
+\doxysubsubsection{\texorpdfstring{MyDLLFind()}{MyDLLFind()}}
+{\footnotesize\ttfamily unsigned char \texorpdfstring{$\ast$}{*} My\+DLLFind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{uint16\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Procura um elemento na lista utilizando a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a estrutura da lista. \\
+\hline
+{\em key} & Chave do elemento a ser procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para os dados do elemento, ou NULL se não for encontrado. 
+\end{DoxyReturn}
+\Hypertarget{MyDLL_8c_a8ea6c1cef9b9fe9576f422489f49d09f}\label{MyDLL_8c_a8ea6c1cef9b9fe9576f422489f49d09f} 
+\index{MyDLL.c@{MyDLL.c}!MyDLLFindNext@{MyDLLFindNext}}
+\index{MyDLLFindNext@{MyDLLFindNext}!MyDLL.c@{MyDLL.c}}
+\doxysubsubsection{\texorpdfstring{MyDLLFindNext()}{MyDLLFindNext()}}
+{\footnotesize\ttfamily unsigned char \texorpdfstring{$\ast$}{*} My\+DLLFind\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{uint16\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Retorna os dados do próximo elemento na lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a estrutura da lista. \\
+\hline
+{\em key} & Chave do elemento atual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para os dados do próximo elemento, ou NULL se não houver próximo. 
+\end{DoxyReturn}
+\Hypertarget{MyDLL_8c_ad63ae7016842037286a1b90a85f4c4e6}\label{MyDLL_8c_ad63ae7016842037286a1b90a85f4c4e6} 
+\index{MyDLL.c@{MyDLL.c}!MyDLLFindPrevious@{MyDLLFindPrevious}}
+\index{MyDLLFindPrevious@{MyDLLFindPrevious}!MyDLL.c@{MyDLL.c}}
+\doxysubsubsection{\texorpdfstring{MyDLLFindPrevious()}{MyDLLFindPrevious()}}
+{\footnotesize\ttfamily unsigned char \texorpdfstring{$\ast$}{*} My\+DLLFind\+Previous (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{uint16\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Retorna os dados do elemento anterior na lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a estrutura da lista. \\
+\hline
+{\em key} & Chave do elemento atual. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para os dados do elemento anterior, ou NULL se não houver anterior. 
+\end{DoxyReturn}
+\Hypertarget{MyDLL_8c_a78718ee2f6bf67755c05117b986b52dc}\label{MyDLL_8c_a78718ee2f6bf67755c05117b986b52dc} 
+\index{MyDLL.c@{MyDLL.c}!MyDLLInit@{MyDLLInit}}
+\index{MyDLLInit@{MyDLLInit}!MyDLL.c@{MyDLL.c}}
+\doxysubsubsection{\texorpdfstring{MyDLLInit()}{MyDLLInit()}}
+{\footnotesize\ttfamily void My\+DLLInit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{size\+\_\+t}]{max\+\_\+elements,  }\item[{size\+\_\+t}]{element\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Inicializa a lista duplamente ligada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a estrutura da lista. \\
+\hline
+{\em max\+\_\+elements} & Número máximo de elementos permitidos na lista. \\
+\hline
+{\em element\+\_\+size} & Tamanho de cada elemento em bytes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{MyDLL_8c_ae63859d8efb99dffab4c321f018d3d3d}\label{MyDLL_8c_ae63859d8efb99dffab4c321f018d3d3d} 
+\index{MyDLL.c@{MyDLL.c}!MyDLLInsert@{MyDLLInsert}}
+\index{MyDLLInsert@{MyDLLInsert}!MyDLL.c@{MyDLL.c}}
+\doxysubsubsection{\texorpdfstring{MyDLLInsert()}{MyDLLInsert()}}
+{\footnotesize\ttfamily int My\+DLLInsert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{uint16\+\_\+t}]{key,  }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Insere um novo elemento na lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a estrutura da lista. \\
+\hline
+{\em key} & Chave única que identifica o elemento. \\
+\hline
+{\em data} & Ponteiro para os dados a serem armazenados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se a inserção foi bem-\/sucedida, -\/1 se falhou (lista cheia ou erro de alocação). 
+\end{DoxyReturn}
+\Hypertarget{MyDLL_8c_ae4f7e4b17a445b0e95c4dcda93ead24e}\label{MyDLL_8c_ae4f7e4b17a445b0e95c4dcda93ead24e} 
+\index{MyDLL.c@{MyDLL.c}!MyDLLRemove@{MyDLLRemove}}
+\index{MyDLLRemove@{MyDLLRemove}!MyDLL.c@{MyDLL.c}}
+\doxysubsubsection{\texorpdfstring{MyDLLRemove()}{MyDLLRemove()}}
+{\footnotesize\ttfamily int My\+DLLRemove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedList}{Doubly\+Linked\+List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{uint16\+\_\+t}]{key }\end{DoxyParamCaption})}
+
+
+
+Remove um elemento da lista pelo key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Ponteiro para a estrutura da lista. \\
+\hline
+{\em key} & Chave do elemento a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se a remoção foi bem-\/sucedida, -\/1 se o elemento não for encontrado. 
+\end{DoxyReturn}
