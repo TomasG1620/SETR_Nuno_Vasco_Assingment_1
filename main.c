@@ -13,16 +13,35 @@ int main() {
     MyDLLInsert(&list, 2, (unsigned char *)&data2);
     MyDLLInsert(&list, 3, (unsigned char *)&data3);
 
-    unsigned char *found = MyDLLFind(&list, 2);
+    unsigned char *found = MyDLLFind(&list, 1);
     if (found) {
         printf("Elemento encontrado: %d\n", *(int *)found);
     } else {
         printf("Elemento não encontrado\n");
     }
 
-    MyDLLRemove(&list, 2);
-    found = MyDLLFind(&list, 2);
-    printf("Após remoção: %s\n", found ? "Ainda existe" : "Removido");
+    found = MyDLLFindNext(&list, 1);
+    if (found) {
+        printf("Elemento encontrado: %d\n", *(int *)found);
+    } else {
+        printf("Elemento não encontrado\n");
+    }
+
+    found = MyDLLFindPrevious(&list, 2);
+    if (found) {
+        printf("Elemento encontrado: %d\n", *(int *)found);
+    } else {
+        printf("Elemento não encontrado\n");
+    }
+
+    MyDLLRemove(&list, 3);
+    found = MyDLLFind(&list, 3);
+    if (found) {
+        printf("Elemento encontrado: %d\n", *(int *)found);
+    } else {
+        printf("Elemento não encontrado\n");
+    }
 
     return 0;
 }
+
