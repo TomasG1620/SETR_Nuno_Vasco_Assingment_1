@@ -1,0 +1,61 @@
+\doxysection{Node Struct Reference}
+\hypertarget{structNode}{}\label{structNode}\index{Node@{Node}}
+
+
+Estrutura de um nó da lista duplamente ligada.  
+
+
+
+
+{\ttfamily \#include $<$My\+DLL.\+h$>$}
+
+
+
+Collaboration diagram for Node\+:
+% FIG 0
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structNode_a868764e64becfb820d70f261153984f5}{key}}
+\item 
+unsigned char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structNode_a06edc07167ccb8e056a78eacba2f3e85}{data}}
+\item 
+struct \mbox{\hyperlink{structNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structNode_aea9fefc3628c3ce98b967e8addf06e88}{prev}}
+\item 
+struct \mbox{\hyperlink{structNode}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structNode_af67b110ca1a258b793bf69d306929b22}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estrutura de um nó da lista duplamente ligada. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structNode_a06edc07167ccb8e056a78eacba2f3e85}\label{structNode_a06edc07167ccb8e056a78eacba2f3e85} 
+\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily unsigned char\texorpdfstring{$\ast$}{*} Node\+::data}
+
+Dados armazenados no nó \Hypertarget{structNode_a868764e64becfb820d70f261153984f5}\label{structNode_a868764e64becfb820d70f261153984f5} 
+\index{Node@{Node}!key@{key}}
+\index{key@{key}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily uint16\+\_\+t Node\+::key}
+
+Chave única do nó \Hypertarget{structNode_af67b110ca1a258b793bf69d306929b22}\label{structNode_af67b110ca1a258b793bf69d306929b22} 
+\index{Node@{Node}!next@{next}}
+\index{next@{next}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structNode}{Node}}\texorpdfstring{$\ast$}{*} Node\+::next}
+
+Ponteiro para o próximo nó \Hypertarget{structNode_aea9fefc3628c3ce98b967e8addf06e88}\label{structNode_aea9fefc3628c3ce98b967e8addf06e88} 
+\index{Node@{Node}!prev@{prev}}
+\index{prev@{prev}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structNode}{Node}}\texorpdfstring{$\ast$}{*} Node\+::prev}
+
+Ponteiro para o nó anterior 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MyDLL_8h}{My\+DLL.\+h}}\end{DoxyCompactItemize}
