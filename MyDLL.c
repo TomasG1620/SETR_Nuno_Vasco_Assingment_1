@@ -34,6 +34,15 @@ int MyDLLInsert(DoublyLinkedList *list, uint16_t key, unsigned char *data) {
         return -1; // Lista cheia
     }
 
+    Node *current = list->head;
+    while (current) {
+        if (current->key == key) {
+            printf("Chave já existente\n");
+            return -1;
+        }
+        current = current->next;
+    }
+
     Node *new_node = (Node *)malloc(sizeof(Node));
     if (!new_node) {
         return -1;
